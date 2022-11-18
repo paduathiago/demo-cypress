@@ -19,4 +19,12 @@ describe('Teste End-to-End', () => {
         // Fecha o pop-up com o preço do frete
         cy.get('.swal-button').click()
     })
+    it('Teste 4: Compra Livro', () => {
+        cy.get('[data-id=1]').within(() => {
+            cy.contains('Comprar').click().then
+            cy.wait(2000)
+        })
+        cy.get('.swal-text').contains('Sua compra foi realizada com sucesso')
+        cy.get('.swal-button').click()
+    })
   })
